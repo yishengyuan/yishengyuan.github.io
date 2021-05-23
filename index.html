@@ -21,9 +21,9 @@
   </script>
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="好记性不如烂键盘">
 <meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="好记性不如烂键盘">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
@@ -41,7 +41,7 @@
   };
 </script>
 
-  <title>Hexo</title>
+  <title>好记性不如烂键盘</title>
   
 
 
@@ -92,9 +92,10 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Hexo</h1>
+      <h1 class="site-title">好记性不如烂键盘</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
+      <p class="site-subtitle" itemprop="description">码农</p>
   </div>
 
   <div class="site-nav-right">
@@ -145,7 +146,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/23/post-title/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/23/hexo-file-asset/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -154,12 +155,12 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="好记性不如烂键盘">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/05/23/post-title/" class="post-title-link" itemprop="url">post title</a>
+            <a href="/2021/05/23/hexo-file-asset/" class="post-title-link" itemprop="url">解决hexo博客图片等文件无法上传的问题</a>
         </h2>
 
         <div class="post-meta">
@@ -170,7 +171,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-05-23 08:22:32 / Modified: 09:20:35" itemprop="dateCreated datePublished" datetime="2021-05-23T08:22:32+08:00">2021-05-23</time>
+              <time title="Created: 2021-05-23 12:37:44 / Modified: 12:55:35" itemprop="dateCreated datePublished" datetime="2021-05-23T12:37:44+08:00">2021-05-23</time>
             </span>
 
           
@@ -184,7 +185,26 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h3 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h3>
+          <p>###安装插件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>###安装插件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+
+<p>###出现异常，代表没有权限</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">npm ERR! command failed</span><br><span class="line">npm ERR! command git --no-replace-objects ls-remote ssh://git@github.com/CodeFalling/hexo-asset-image.git</span><br><span class="line">npm ERR! key_load_public: invalid format</span><br><span class="line">npm ERR! git@github.com: Permission denied (publickey).</span><br><span class="line">npm ERR! fatal: Could not read from remote repository.</span><br><span class="line">npm ERR!</span><br><span class="line">npm ERR! Please make sure you have the correct access rights</span><br><span class="line">npm ERR! and the repository exists.</span><br></pre></td></tr></table></figure>
+
+<p>###验证邮箱和github注册邮箱输入的是否一致 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
+
+<p>###换上你自己的邮箱</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C “这里换上你的邮箱”</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
       
     </div>
 
@@ -203,7 +223,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/23/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/23/post-title/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -212,12 +232,12 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="好记性不如烂键盘">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/05/23/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+            <a href="/2021/05/23/post-title/" class="post-title-link" itemprop="url">你好</a>
         </h2>
 
         <div class="post-meta">
@@ -226,16 +246,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2021-05-23 08:10:55" itemprop="dateCreated datePublished" datetime="2021-05-23T08:10:55+08:00">2021-05-23</time>
+              <time title="Created: 2021-05-23 08:22:32 / Modified: 12:37:44" itemprop="dateCreated datePublished" datetime="2021-05-23T08:22:32+08:00">2021-05-23</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-30 01:59:07" itemprop="dateModified" datetime="2021-04-30T01:59:07+08:00">2021-04-30</time>
-              </span>
 
           
 
@@ -248,19 +262,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+          <p><img src="img_1.png" alt="img_1.png"><br>hexo new page<br>hexo g   生成文件<br>hexo d   部署<br>hexo s  部署服务<br>hexo g  -w 监控文件变动<br>hexo publish 发布草稿<br>hexo list post<br>hexo version  查看版本<br>hexo –safe 安全模式<br>hexo –debug debug模式 将调试信息放到debug.log中<br>hexo g –slient 简洁模式<br>hexo –draft 生成草稿<br>hexo g –cwd test 自定义工作目录 </p>
+<p>部署<br>安装 hexo-deployer-git<br>npm install hexo-deployer-git –save<br>修改配置 ：<br>npm list hexo-deployer-git<br>在config.yml文件下修改<br>deploy:<br>  type: git<br>  repo: <a target="_blank" rel="noopener" href="https://github.com/yishengyuan/blog.git">https://github.com/yishengyuan/blog.git</a><br>  branch: test</p>
+<p>安装hexo-admin<br>npm install hexo-admin –save</p>
+<p>在config.yml 中 增加<br>#hexo-admin 账号密码cookie<br>admin:<br>  username: admin<br>  password_hash: 123456<br>  secret: 123456</p>
+<p>使用阿里云绑定hexo博客github<br>在阿里购买域名 konglingfu.top<br>进入阿里云控制台<br><a target="_blank" rel="noopener" href="https://dc.console.aliyun.com/next/index#/domain/list/all-domain">https://dc.console.aliyun.com/next/index#/domain/list/all-domain</a><br>进入解析设置<br>添加记录<br>记录类型: CNAME<br>记录值:   yishengyuan.github.io<br>主机记录： www</p>
+<p>记录类型: A<br>记录值:   108.160.165.147<br>主机记录： @</p>
+<p>在git目录下创建一个CNAME文件 并将域名加入到其中<br><a target="_blank" rel="noopener" href="https://github.com/yishengyuan/blog/blob/test/CNAME">https://github.com/yishengyuan/blog/blob/test/CNAME</a></p>
 
       
     </div>
