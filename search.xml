@@ -1,39 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>解决hexo博客图片等文件无法上传的问题</title>
-      <link href="2021/05/23/hexo-file-asset/"/>
-      <url>2021/05/23/hexo-file-asset/</url>
-      
-        <content type="html"><![CDATA[<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br></pre></td></tr></table></figure><h3 id="出现异常，代表没有权限"><a href="#出现异常，代表没有权限" class="headerlink" title="出现异常，代表没有权限"></a>出现异常，代表没有权限</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">npm ERR! command failed</span><br><span class="line">npm ERR! command git --no-replace-objects ls-remote ssh://git@github.com/CodeFalling/hexo-asset-image.git</span><br><span class="line">npm ERR! key_load_public: invalid format</span><br><span class="line">npm ERR! git@github.com: Permission denied (publickey).</span><br><span class="line">npm ERR! fatal: Could not read from remote repository.</span><br><span class="line">npm ERR!</span><br><span class="line">npm ERR! Please make sure you have the correct access rights</span><br><span class="line">npm ERR! and the repository exists.</span><br></pre></td></tr></table></figure><h3 id="验证邮箱和github注册邮箱输入的是否一致"><a href="#验证邮箱和github注册邮箱输入的是否一致" class="headerlink" title="验证邮箱和github注册邮箱输入的是否一致"></a>验证邮箱和github注册邮箱输入的是否一致</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure><h3 id="换上你自己的邮箱"><a href="#换上你自己的邮箱" class="headerlink" title="换上你自己的邮箱"></a>换上你自己的邮箱</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C “这里换上你的邮箱”</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> hexo搭建 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>使用Hexo和githubpage发布博客</title>
-      <link href="2021/05/23/post-title/"/>
-      <url>2021/05/23/post-title/</url>
-      
-        <content type="html"><![CDATA[<h3 id="生成一个新的页面"><a href="#生成一个新的页面" class="headerlink" title="生成一个新的页面"></a>生成一个新的页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page </span><br></pre></td></tr></table></figure><h3 id="部署文件"><a href="#部署文件" class="headerlink" title="部署文件"></a>部署文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure><h3 id="上传文件到github"><a href="#上传文件到github" class="headerlink" title="上传文件到github"></a>上传文件到github</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d  </span><br></pre></td></tr></table></figure><h3 id="本地启动博客服务"><a href="#本地启动博客服务" class="headerlink" title="本地启动博客服务"></a>本地启动博客服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s  </span><br></pre></td></tr></table></figure><h3 id="监控文件变动服务能实时的更新页面"><a href="#监控文件变动服务能实时的更新页面" class="headerlink" title="监控文件变动服务能实时的更新页面"></a>监控文件变动服务能实时的更新页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g -w  </span><br></pre></td></tr></table></figure><h3 id="发布草稿-用处不是很大"><a href="#发布草稿-用处不是很大" class="headerlink" title="发布草稿 用处不是很大"></a>发布草稿 用处不是很大</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo  publish  </span><br></pre></td></tr></table></figure><h3 id="查看hexo版本号"><a href="#查看hexo版本号" class="headerlink" title="查看hexo版本号"></a>查看hexo版本号</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo  version</span><br></pre></td></tr></table></figure><h3 id="debug模式，将调试信息放到debug-log中"><a href="#debug模式，将调试信息放到debug-log中" class="headerlink" title="debug模式，将调试信息放到debug.log中"></a>debug模式，将调试信息放到debug.log中</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo  --debug</span><br></pre></td></tr></table></figure><h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h3 id="安装hexo-deployer-git"><a href="#安装hexo-deployer-git" class="headerlink" title="安装hexo-deployer-git"></a>安装hexo-deployer-git</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save </span><br></pre></td></tr></table></figure><h3 id="查看安装是否成功"><a href="#查看安装是否成功" class="headerlink" title="查看安装是否成功"></a>查看安装是否成功</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm list hexo-deployer-git </span><br></pre></td></tr></table></figure><h3 id="deploy到github上-在config-yml文件下修改"><a href="#deploy到github上-在config-yml文件下修改" class="headerlink" title="deploy到github上 在config.yml文件下修改"></a>deploy到github上 在config.yml文件下修改</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/yishengyuan/blog.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">test</span></span><br></pre></td></tr></table></figure><h3 id="安装hexo-admin-插件"><a href="#安装hexo-admin-插件" class="headerlink" title="安装hexo-admin 插件"></a>安装hexo-admin 插件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-admin --save</span><br></pre></td></tr></table></figure><h3 id="hexo-admin-账号密码cookie"><a href="#hexo-admin-账号密码cookie" class="headerlink" title="hexo-admin 账号密码cookie"></a>hexo-admin 账号密码cookie</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">admin:</span></span><br><span class="line">  <span class="attr">username:</span> <span class="string">admin</span></span><br><span class="line">  <span class="attr">password_hash:</span> <span class="number">123456</span></span><br><span class="line">  <span class="attr">secret:</span> <span class="number">123456</span></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-  
-  
+<search>
+  <entry>
+    <title>解决hexo博客图片等文件无法上传的问题</title>
+    <url>/2021/05/23/hexo-file-asset/</url>
+    <content><![CDATA[<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="出现异常，代表没有权限"><a href="#出现异常，代表没有权限" class="headerlink" title="出现异常，代表没有权限"></a>出现异常，代表没有权限</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm ERR! command failed</span><br><span class="line">npm ERR! command git --no-replace-objects ls-remote ssh://git@github.com/CodeFalling/hexo-asset-image.git</span><br><span class="line">npm ERR! key_load_public: invalid format</span><br><span class="line">npm ERR! git@github.com: Permission denied (publickey).</span><br><span class="line">npm ERR! fatal: Could not read from remote repository.</span><br><span class="line">npm ERR!</span><br><span class="line">npm ERR! Please make sure you have the correct access rights</span><br><span class="line">npm ERR! and the repository exists.</span><br></pre></td></tr></table></figure>
+
+<h3 id="验证邮箱和github注册邮箱输入的是否一致"><a href="#验证邮箱和github注册邮箱输入的是否一致" class="headerlink" title="验证邮箱和github注册邮箱输入的是否一致"></a>验证邮箱和github注册邮箱输入的是否一致</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
+
+<h3 id="换上你自己的邮箱"><a href="#换上你自己的邮箱" class="headerlink" title="换上你自己的邮箱"></a>换上你自己的邮箱</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C “这里换上你的邮箱”</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <tags>
+        <tag>hexo搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用Hexo和githubpage发布博客</title>
+    <url>/2021/05/23/post-title/</url>
+    <content><![CDATA[<h3 id="生成一个新的页面"><a href="#生成一个新的页面" class="headerlink" title="生成一个新的页面"></a>生成一个新的页面</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page </span><br></pre></td></tr></table></figure>
+
+<h3 id="部署文件"><a href="#部署文件" class="headerlink" title="部署文件"></a>部署文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+
+<h3 id="上传文件到github"><a href="#上传文件到github" class="headerlink" title="上传文件到github"></a>上传文件到github</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo d  </span><br></pre></td></tr></table></figure>
+
+<h3 id="本地启动博客服务"><a href="#本地启动博客服务" class="headerlink" title="本地启动博客服务"></a>本地启动博客服务</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo s  </span><br></pre></td></tr></table></figure>
+
+<h3 id="监控文件变动服务能实时的更新页面"><a href="#监控文件变动服务能实时的更新页面" class="headerlink" title="监控文件变动服务能实时的更新页面"></a>监控文件变动服务能实时的更新页面</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g -w  </span><br></pre></td></tr></table></figure>
+
+<h3 id="发布草稿-用处不是很大"><a href="#发布草稿-用处不是很大" class="headerlink" title="发布草稿 用处不是很大"></a>发布草稿 用处不是很大</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo  publish  </span><br></pre></td></tr></table></figure>
+<h3 id="查看hexo版本号"><a href="#查看hexo版本号" class="headerlink" title="查看hexo版本号"></a>查看hexo版本号</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo  version</span><br></pre></td></tr></table></figure>
+
+<h3 id="debug模式，将调试信息放到debug-log中"><a href="#debug模式，将调试信息放到debug-log中" class="headerlink" title="debug模式，将调试信息放到debug.log中"></a>debug模式，将调试信息放到debug.log中</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo  --debug</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h3 id="安装hexo-deployer-git"><a href="#安装hexo-deployer-git" class="headerlink" title="安装hexo-deployer-git"></a>安装hexo-deployer-git</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save </span><br></pre></td></tr></table></figure>
+
+<h3 id="查看安装是否成功"><a href="#查看安装是否成功" class="headerlink" title="查看安装是否成功"></a>查看安装是否成功</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ npm list hexo-deployer-git </span><br></pre></td></tr></table></figure>
+
+<h3 id="deploy到github上-在config-yml文件下修改"><a href="#deploy到github上-在config-yml文件下修改" class="headerlink" title="deploy到github上 在config.yml文件下修改"></a>deploy到github上 在config.yml文件下修改</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/yishengyuan/blog.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">test</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="安装hexo-admin-插件"><a href="#安装hexo-admin-插件" class="headerlink" title="安装hexo-admin 插件"></a>安装hexo-admin 插件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-admin --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="hexo-admin-账号密码cookie"><a href="#hexo-admin-账号密码cookie" class="headerlink" title="hexo-admin 账号密码cookie"></a>hexo-admin 账号密码cookie</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">admin:</span></span><br><span class="line">  <span class="attr">username:</span> <span class="string">admin</span></span><br><span class="line">  <span class="attr">password_hash:</span> <span class="number">123456</span></span><br><span class="line">  <span class="attr">secret:</span> <span class="number">123456</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>使用jdk8集合类操作</title>
+    <url>/2021/05/24/lambda/java8-collection/</url>
+    <content><![CDATA[<h3 id="定义一个List集合"><a href="#定义一个List集合" class="headerlink" title="定义一个List集合"></a>定义一个List集合</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">List&lt;Student&gt; studentList = new ArrayList&lt;&gt;();</span><br><span class="line">    studentList.add(new Student(1,&quot;张三&quot;,&quot;M&quot;,18,90,true));</span><br><span class="line">    studentList.add(new Student(2,&quot;李四&quot;,&quot;M&quot;,18,55,false));</span><br><span class="line">    studentList.add(new Student(3,&quot;王五&quot;,&quot;F&quot;,20,100,true));</span><br><span class="line">    studentList.add(new Student(4,&quot;赵六&quot;,&quot;F&quot;,20,40,false));</span><br></pre></td></tr></table></figure>
+
+<h3 id="根据性别进行map排序"><a href="#根据性别进行map排序" class="headerlink" title="根据性别进行map排序"></a>根据性别进行map排序</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Map&lt;String, List&lt;Student&gt;&gt; map = studentList.stream().collect(Collectors.groupingBy(Student::getSex));</span><br></pre></td></tr></table></figure>
+
+<h3 id="集合总数统计-第一种"><a href="#集合总数统计-第一种" class="headerlink" title="集合总数统计 第一种"></a>集合总数统计 第一种</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Long result = studentList.stream().collect(Collectors.counting()); </span><br></pre></td></tr></table></figure>
+
+<h3 id="集合总数统计-第二种"><a href="#集合总数统计-第二种" class="headerlink" title="集合总数统计 第二种"></a>集合总数统计 第二种</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">long count = studentList.stream().count();</span><br></pre></td></tr></table></figure>
+
+<h3 id="获取集合中年龄的最大值与最小值"><a href="#获取集合中年龄的最大值与最小值" class="headerlink" title="获取集合中年龄的最大值与最小值"></a>获取集合中年龄的最大值与最小值</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Optional&lt;Student&gt; optional = studentList.stream().collect(Collectors.maxBy(Comparator.comparing(Student::getAge)));</span><br><span class="line"> if (optional.isPresent())&#123;</span><br><span class="line">            System.out.println(optional.get());</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>jdk8</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>个人域名备案</title>
+    <url>/2021/05/24/personal_yuming/</url>
+    <content><![CDATA[<h3 id="备案流程"><a href="#备案流程" class="headerlink" title="备案流程"></a>备案流程</h3><h4 id="登录申请阿里云域名"><a href="#登录申请阿里云域名" class="headerlink" title="登录申请阿里云域名"></a>登录申请阿里云域名</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">选择域名》并支付</span><br><span class="line">konglingfu.top</span><br></pre></td></tr></table></figure>
+
+<h4 id="个人实名制"><a href="#个人实名制" class="headerlink" title="个人实名制"></a>个人实名制</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">域名必须进行实名认证才可以通过，还需要邮箱验证</span><br></pre></td></tr></table></figure>
+
+<h4 id="备案服务号申请"><a href="#备案服务号申请" class="headerlink" title="备案服务号申请"></a>备案服务号申请</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">域名必须进行实名认证才可以通过，还需要邮箱验证</span><br></pre></td></tr></table></figure>
+
+<h4 id="域名备案"><a href="#域名备案" class="headerlink" title="域名备案"></a>域名备案</h4><ol>
+<li>打开阿里云app</li>
+<li>搜索备案 </li>
+<li>在白色背景后人脸识别 </li>
+<li>身份证拍照  </li>
+<li>等待3-5个工作日</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>如何书写软件项目开发进度</title>
+    <url>/2021/05/24/write-word/</url>
+    <content><![CDATA[<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">XX文库中搜索相关的软件进度文档</span><br><span class="line">将文档中时间等内容变更</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用自定义新的列表样式"><a href="#使用自定义新的列表样式" class="headerlink" title="使用自定义新的列表样式"></a>使用自定义新的列表样式</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1</span><br><span class="line">1.1</span><br><span class="line">1.2</span><br><span class="line">1.2.1</span><br><span class="line">1.3</span><br><span class="line">优点：在删除或者更新目录节点时，可自动更新不需要手动</span><br></pre></td></tr></table></figure>
+
+<h3 id="文档格式要求"><a href="#文档格式要求" class="headerlink" title="文档格式要求"></a>文档格式要求</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">首页字体 黑体初号</span><br><span class="line">标题使用 黑体三号 </span><br><span class="line">正文使用 仿宋_GB2312格式</span><br><span class="line">正文前两个空格</span><br><span class="line">首页设置开始》分页 </span><br><span class="line">目录更新域》更新整个目录</span><br><span class="line">插入表格内格式使用仿宋小四</span><br></pre></td></tr></table></figure>
+
+<h3 id="将所在的文字修改为某级目录"><a href="#将所在的文字修改为某级目录" class="headerlink" title="将所在的文字修改为某级目录"></a>将所在的文字修改为某级目录</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">首先选中标题3，标题3就代表了三级目录</span><br><span class="line">然后选中开始》定好的列表格式</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="编号在设置后出现需要不正确"><a href="#编号在设置后出现需要不正确" class="headerlink" title="编号在设置后出现需要不正确"></a>编号在设置后出现需要不正确</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">对文字所在的标题进行重新编号</span><br><span class="line">检查上级目录是否是按照自定义样式格式化  </span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <tags>
+        <tag>文档</tag>
+      </tags>
+  </entry>
 </search>
